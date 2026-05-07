@@ -155,11 +155,13 @@ The advantage of coarse-grained locking is simpler code and easier management, b
 
 ### Critical Section #1: Counter Variables
 
-**Which variables**: 
+**Which variables**: contextSwitchCount, completedProcessCount, and totalWaitingTime
 
-**Why they need protection**: 
 
-**Synchronization mechanism used**: 
+**Why they need protection**:These variables are shared between multiple threads. Without synchronization, multiple threads may update them at the same time causing race conditions and incorrect values.
+ 
+
+**Synchronization mechanism used**: ReentrantLock
 
 **Code snippet**:
 ```java
