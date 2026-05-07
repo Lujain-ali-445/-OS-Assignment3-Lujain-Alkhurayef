@@ -143,7 +143,11 @@ The locks were always unlocked in the finally section to ensure resources were r
 
 **Your Answer**:
 
-[Your answer here - explain coarse-grained vs fine-grained locking, independence of counters, concurrency implications. Show understanding of when to use each approach. 5-8 sentences expected.]
+[I used separate locks for each shared counter instead of one lock for all counters. This is considered fine-grained locking because each resource has its own lock. I made this choice because the counters are independent and can be updated separately by different threads.
+
+Using separate locks improves concurrency because multiple threads can work on different counters simultaneously without blocking each other. In contrast, using one shared lock for all counters would reduce performance because threads would wait even when accessing unrelated resources.
+
+The advantage of coarse-grained locking is simpler code and easier management, but it reduces parallelism. Fine-grained locking provides better performance and concurrency but requires more careful implementation. Since the counters are independent in this assignment, fine-grained locking provides better concurrency and efficiency.]
 
 ---
 
