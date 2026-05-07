@@ -164,26 +164,34 @@ The advantage of coarse-grained locking is simpler code and easier management, b
 **Synchronization mechanism used**: ReentrantLock
 
 **Code snippet**:
-```java
-// Paste your implementation here
-```
+contextSwitchLock.lock();
+try {
+    contextSwitchCount++;
+} finally {
+    contextSwitchLock.unlock();
+}
 
-**Justification**: 
+
+**Justification**:ReentrantLock was used to ensure that only one thread can modify the shared counters at a time. This prevents race conditions and guarantees consistent counter values. 
 
 ---
 
 ### Critical Section #2: Execution Log
 
-**What resource**: 
+**What resource**:executionLog ArrayList 
 
-**Why it needs protection**: 
+**Why it needs protection**:Multiple threads may access and modify the execution log simultaneously which can cause ConcurrentModificationException or corrupted log entries.
+ 
 
-**Synchronization mechanism used**: 
+**Synchronization mechanism used**:ReentrantLock 
 
 **Code snippet**:
-```java
-// Paste your implementation here
-```
+logLock.lock();
+try {
+    executionLog.add(logEntry);
+} finally {
+    logLock.unlock();
+}
 
 **Justification**: 
 
