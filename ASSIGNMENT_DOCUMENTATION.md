@@ -277,7 +277,7 @@ The program was executed more than five times using the Run option in VS Code to
 
 ### What I learned about synchronization:
 
-[6-8 sentences about key concepts, challenges, insights]
+[This assignment helped me understand how synchronization protects shared resources in multithreaded programs. I learned that race conditions occur when multiple threads access shared data simultaneously without protection. ReentrantLock can be used to protect critical sections and ensure mutual exclusion. Semaphore can control access to limited resources such as CPU execution. I also learned the importance of try-finally blocks to prevent deadlocks and ensure locks are released correctly. Testing synchronization multiple times is necessary because concurrency issues may not appear in every execution. Overall, this assignment improved my understanding of operating system synchronization concepts and Java thread safety.]
 
 ---
 
@@ -285,15 +285,16 @@ The program was executed more than five times using the Run option in VS Code to
 
 Give TWO examples where synchronization is critical:
 
-**Example 1**: 
+**Example 1**:Banking systems use synchronization to prevent multiple users from modifying the same bank account balance simultaneously.
+ 
 
-**Example 2**: 
+**Example 2**: Online reservation systems use synchronization to prevent multiple users from booking the same seat or ticket at the same time.
 
 ---
 
 ### How I would explain synchronization to others:
 
-[Explain to someone who just finished Assignment 1 - use simple terms and analogies]
+[Synchronization is like organizing access to a shared resource so that only one person uses it at the correct time. For example, if multiple people try to write on the same paper simultaneously, the information may become corrupted. Locks and semaphores act like traffic signals that control access and prevent conflicts between threads. Synchronization ensures programs run correctly and produce stable results.]
 
 ---
 
