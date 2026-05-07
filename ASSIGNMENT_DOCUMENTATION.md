@@ -45,15 +45,15 @@ Document your development process with **minimum 3 entries** showing progression
 ---
 
 ### Entry 2 - [Date, Time]
-**What I implemented**: 
+**What I implemented**:Added ReentrantLock to protect shared counters and execution logs from race conditions.
 
-**Challenges encountered**: 
+**Challenges encountered**:There were red underline errors because required imports were missing. 
 
-**How I solved it**: 
+**How I solved it**:Added Semaphore and ReentrantLock import statements at the top of the file. 
 
-**Testing approach**: 
+**Testing approach**:Ran the program multiple times to ensure no synchronization errors occurred. 
 
-**Time spent**: 
+**Time spent**:45 minutes 
 
 ---
 
