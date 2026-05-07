@@ -58,15 +58,15 @@ Document your development process with **minimum 3 entries** showing progression
 ---
 
 ### Entry 3 - [Date, Time]
-**What I implemented**: 
+**What I implemented**: Implemented Semaphore to control concurrent CPU access and completed assignment documentation.
 
-**Challenges encountered**: 
+**Challenges encountered**:GitHub changes were not updating after editing the code 
 
-**How I solved it**: 
+**How I solved it**: Used Commit and Sync Changes in VS Code to upload all modifications to GitHub.
 
-**Testing approach**: 
+**Testing approach**:Checked GitHub repository and confirmed all updated code was uploaded correctly. 
 
-**Time spent**: 
+**Time spent**: 40 minutes
 
 ---
 
