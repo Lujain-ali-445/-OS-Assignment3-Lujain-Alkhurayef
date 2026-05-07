@@ -193,24 +193,28 @@ try {
     logLock.unlock();
 }
 
-**Justification**: 
+**Justification**:The lock ensures thread-safe access to the shared execution log and prevents concurrent modification problems. 
 
 ---
 
 ### Critical Section #3: CPU Semaphore
 
-**Purpose of semaphore**: 
+**Purpose of semaphore**:The semaphore was used to control CPU access and allow only one process to execute at a time. 
 
-**Number of permits and why**: 
+**Number of permits and why**: A binary semaphore with 1 permit was used because only one process should access the CPU at a time.
 
-**Where implemented**: 
+**Where implemented**:The semaphore was implemented around the CPU execution section in the scheduler simulation. 
 
 **Code snippet**:
-```java
-// Paste your implementation here
-```
+cpuSemaphore.acquire();
 
-**Effect on program behavior**: 
+try {
+    executeProcess();
+} finally {
+    cpuSemaphore.release();
+}
+
+**Effect on program behavior**:The semaphore prevented multiple processes from executing simultaneously and improved synchronization consistency in the program. 
 
 ---
 
