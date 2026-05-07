@@ -128,7 +128,9 @@ Semaphore is used to control access to a limited resource using permits. A binar
 
 **Your Answer**:
 
-[Your answer here - reference try-finally blocks, lock ordering, etc.]
+[Deadlock occurs when two or more threads wait for each other indefinitely while holding resources. In this assignment, deadlocks were prevented by using proper synchronization techniques and releasing locks correctly using try-finally blocks.
+
+The locks were always unlocked in the finally section to ensure resources were released even if an exception occurred. Only necessary critical sections were locked and locks were not nested unnecessarily. The semaphore was also released properly after CPU execution. These practices helped prevent deadlocks and ensured smooth thread execution.]
 
 ---
 
