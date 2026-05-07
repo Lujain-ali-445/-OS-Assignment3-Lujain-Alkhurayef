@@ -224,50 +224,52 @@ try {
 **What I tested**: Running program multiple times to verify consistent results
 
 **Testing procedure**: 
-```bash
-# Commands used (run the program at least 5 times)
-```
+The program was executed more than five times using the Run option in VS Code to verify consistent synchronization behavior and correct output values.
 
 **Results**: 
-(Show that running multiple times produces consistent, correct results)
+(The output values remained consistent in all executions. No incorrect counter values or unexpected behavior appeared.)
 
 **Why synchronization is necessary**: 
-(Explain what race conditions COULD occur without synchronization, even if you didn't observe them. Explain which shared resources need protection and why.)
+(Without synchronization, multiple threads could access shared counters and execution logs simultaneously causing race conditions and inconsistent results. Shared resources such as counters and ArrayList require protection to maintain data integrity.)
 
-**Conclusion**: 
+**Conclusion**: Synchronization mechanisms successfully ensured stable and correct execution results across multiple runs.
 
 ---
 
 ### Test 2: Exception Testing
 **What I tested**: Checking for ConcurrentModificationException
 
-**Testing procedure**: 
+**Testing procedure**:The execution log was tested while multiple threads were running simultaneously to check for ConcurrentModificationException.
+ 
 
-**Results**: 
+**Results**: No ConcurrentModificationException errors occurred after protecting the execution log using ReentrantLock.
 
-**What this proves**: 
+**What this proves**: This proves that synchronization successfully protected the shared execution log from concurrent modification problems.
+
 
 ---
 
 ### Test 3: Correctness Verification
 **What I tested**: Verifying correct final values (total burst time, context switches, etc.)
 
-**Expected values**: 
+**Expected values**: Expected values included correct context switch counts, completed process counts, and stable waiting time calculations.
 
-**Actual values**: 
+**Actual values**:The actual program output matched the expected results during all test executions. 
 
-**Analysis**: 
+**Analysis**: Synchronization mechanisms prevented race conditions and maintained correct final values for all shared resources.
 
 ---
 
 ### Test 4: Different Scenarios
-**Scenario tested**: [e.g., different time quantum, more processes, etc.]
+**Scenario tested**: [The program was tested with multiple processes and different execution timings.
+]
 
-**Purpose**: 
+**Purpose**: To verify that synchronization mechanisms continue working correctly under different execution conditions.
 
-**Results**: 
+**Results**:The program maintained stable execution and no synchronization issues occurred. 
 
-**What I learned**: 
+**What I learned**: I learned that synchronization is essential for maintaining correctness and consistency in multithreaded applications.
+
 
 ---
 
