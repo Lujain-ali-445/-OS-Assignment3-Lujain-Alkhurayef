@@ -106,7 +106,9 @@ Document your development process with **minimum 3 entries** showing progression
 
 **Your Answer**:
 
-[Your answer here - 4-6 sentences with code examples]
+[Two race conditions existed in the original code. The first race condition affected the shared counters such as contextSwitchCount and completedProcessCount. Concurrent access was a problem because multiple threads could update the counters at the same time, causing incorrect values and inconsistent results. For example, two threads might increment the same counter simultaneously and one update could be lost.
+
+The second race condition affected the executionLog ArrayList. Multiple threads accessing and modifying the list concurrently could cause ConcurrentModificationException or corrupted log entries. ReentrantLock was added to protect these shared resources and ensure thread-safe access.]
 
 ---
 
