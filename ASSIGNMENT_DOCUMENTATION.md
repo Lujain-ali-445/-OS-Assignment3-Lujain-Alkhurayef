@@ -32,15 +32,15 @@
 Document your development process with **minimum 3 entries** showing progression:
 
 ### Entry 1 - [Date, Time]
-**What I implemented**: 
+**What I implemented**:Forked the GitHub repository, cloned the project using VS Code, and updated my student ID in the Java file.
 
-**Challenges encountered**: 
+**Challenges encountered**:The Java file was opened in read-only mode and could not be edited.
 
-**How I solved it**: 
+**How I solved it**:I reopened the project folder correctly in VS Code and fixed the file access issue. 
 
-**Testing approach**: 
+**Testing approach**: Verified that the file could be edited and saved successfully.
 
-**Time spent**: 
+**Time spent**: 30 minutes
 
 ---
 
