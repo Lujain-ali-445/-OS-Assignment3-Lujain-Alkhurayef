@@ -117,7 +117,9 @@ The second race condition affected the executionLog ArrayList. Multiple threads 
 
 **Your Answer**:
 
-[Your answer here - explain your implementation choices]
+[ReentrantLock is used for mutual exclusion, meaning only one thread can access a critical section at a time. In this assignment, ReentrantLock was used to protect shared counters and execution logs from race conditions.
+
+Semaphore is used to control access to a limited resource using permits. A binary semaphore with one permit was used in this assignment to limit CPU access and ensure that only one process executes at a time. Locks protected shared data while Semaphore controlled concurrent process execution.]
 
 ---
 
