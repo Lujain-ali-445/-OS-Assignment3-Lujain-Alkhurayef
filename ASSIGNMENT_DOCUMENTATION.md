@@ -300,30 +300,31 @@ Give TWO examples where synchronization is critical:
 
 ## Part 6: GitHub Repository Information
 
-**Repository URL**: 
+**Repository URL**:https://github.com/YOUR-USERNAME/OS-Assignment3-Lujain-Alkhurayef 
 
-**Number of commits**: 
+**Number of commits**: 4
 
 **Commit messages**: 
-1. 
-2. 
-3. 
-4. 
-
+1. Set student ID
+2. Added synchronization locks
+3. Added semaphore implementation
+4. Completed assignment documentation
 ---
 
 ## Summary
 
-**Total time spent on assignment**: 
+**Total time spent on assignment**: 4 hours
+
 
 **Key takeaways**: 
-1. 
-2. 
-3. 
+1. Understanding race conditions
+2. Using ReentrantLock for thread safety
+3. Using Semaphore for controlling CPU access
 
-**Most challenging aspect**: 
+**Most challenging aspect**: Debugging synchronization issues and handling shared resources correctly.
 
-**What I'm most proud of**: 
+
+**What I'm most proud of**: Successfully implementing synchronization mechanisms and achieving consistent program behavior.
 
 ---
 
